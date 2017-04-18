@@ -1,0 +1,7 @@
+sudo: required
+dist: trusty
+install:
+ - pip install coala-bears
+ - npm install -g eslint
+script:
+ - coala --files=js/*.js --bears=ESLintBear
