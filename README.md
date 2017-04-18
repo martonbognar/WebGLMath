@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/martonbognar/WebGLMath.svg?branch=master)](https://travis-ci.org/martonbognar/WebGLMath)
 # WebGLMath
 ### A Vector math library for WebGL programming. Primarily intended for graphics education, with a focused set of features. Coded by Laszlo Szecsi for courses at the Aquincum Institute of Technology and the Budapest University of Technology and Economics.
 
