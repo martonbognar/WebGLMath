@@ -4,6 +4,6 @@ install:
  - pip3 install coala-bears
  - npm install -g eslint
 script:
- - coala --files=js/*.js --bears=ESLintBear
+ - coala --ci --files=js/*.js --bears=ESLintBear
 notifications:
   email: false
