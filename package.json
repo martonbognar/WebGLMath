@@ -2,6 +2,7 @@
   "name": "webglmath",
   "devDependencies": {
     "webpack": "latest",
+    "glob": "latest",
     "eslint": "latest",
     "jest": "latest"
   },
