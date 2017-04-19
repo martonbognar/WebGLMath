@@ -22,6 +22,8 @@ var Mat4 = function(m) {
   this.set(m);
 };
 
+export {Mat4};
+
 /**
  * @method clone
  * @memberof Mat.prototype

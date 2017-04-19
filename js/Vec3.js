@@ -42,6 +42,8 @@ var Vec3 = function(u, v, s) {
   ]);
 };
 
+export {Vec3};
+
 /**
  * @method clone
  * @memberof Vec3.prototype

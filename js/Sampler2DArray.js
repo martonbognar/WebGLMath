@@ -3,6 +3,8 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {Sampler2D} from './Sampler2D';
+
 /**
  * @class Sampler2DArray
  * @classdesc Array of 2d samplers. May reflect an ESSL array-of-sampler2Ds uniform variable.
@@ -22,6 +24,8 @@ var Sampler2DArray = function(size, baseTextureUnit) {
     Object.defineProperty(this, i, {value: proxy});
   }
 };
+
+export {Sampler2DArray};
 
 /**
  * @method commit

@@ -11,6 +11,8 @@
 var VecArray = function() {
 };
 
+export {VecArray};
+
 /**
  * @method add
  * @memberof VecArray.prototype

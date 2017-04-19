@@ -15,6 +15,8 @@ var Sampler2D = function(textureUnit) {
   this.storage = new Int32Array([textureUnit]);
 };
 
+export {Sampler2D};
+
 /**
  * @method set
  * @memberof Sampler2D.prototype

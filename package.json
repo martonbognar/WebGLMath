@@ -1,0 +1,14 @@
+{
+  "name": "webglmath",
+  "devDependencies": {
+    "webpack": "latest",
+    "glob": "latest",
+    "eslint": "latest",
+    "jest": "latest"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "analyze": "coala --ci --files=js/*.js --bears=ESLintBear",
+    "test": "jest"
+  }
+}
