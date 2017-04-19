@@ -1,0 +1,4 @@
+{
+    "preset": "google",
+    "checkAnnotations": "jsdoc3"
+}
