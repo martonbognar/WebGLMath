@@ -1,9 +1,10 @@
 sudo: required
 dist: trusty
 install:
+ - npm install
  - pip3 install coala-bears
- - npm install -g eslint
 script:
- - coala --ci --files=js/*.js --bears=ESLintBear
+ - npm run analyze
+ - npm run build
 notifications:
   email: false
