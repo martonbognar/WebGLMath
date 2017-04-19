@@ -39,6 +39,8 @@ var Vec2 = function(u, v) {
   ]);
 };
 
+export {Vec2};
+
 /**
  * @method clone
  * @memberof Vec2.prototype

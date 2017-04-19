@@ -20,6 +20,8 @@ var Vec1 = function(u) {
   ]);
 };
 
+export {Vec1};
+
 /**
  * @method clone
  * @memberof Vec1.prototype

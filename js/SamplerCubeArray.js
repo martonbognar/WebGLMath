@@ -3,6 +3,8 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {SamplerCube} from './SamplerCube';
+
 /**
  * @class SamplerCubeArray
  * @classdesc Array of 2d cube samplers. May reflect an ESSL array-of-samplerCubes uniform variable.
@@ -22,6 +24,8 @@ var SamplerCubeArray = function(size, baseTextureUnit) {
     Object.defineProperty(this, i, {value: proxy});
   }
 };
+
+export {SamplerCubeArray};
 
 /**
  * @method commit

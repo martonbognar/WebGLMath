@@ -3,6 +3,21 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {Vec1} from './Vec1';
+import {Vec1Array} from './Vec1Array';
+import {Vec2} from './Vec2';
+import {Vec2Array} from './Vec2Array';
+import {Vec3} from './Vec3';
+import {Vec3Array} from './Vec3Array';
+import {Vec4} from './Vec4';
+import {Vec4Array} from './Vec4Array';
+import {Mat4} from './Mat4';
+import {Mat4Array} from './Mat4Array';
+import {Sampler2D} from './Sampler2D';
+import {Sampler2DArray} from './Sampler2DArray';
+import {SamplerCube} from './SamplerCube';
+import {SamplerCubeArray} from './SamplerCubeArray';
+
 /**
  * @class UniformReflectionFactories
  * @classdesc A collection of static factory methods that return WebGLMath objects reflecting WebGL uniforms.
@@ -86,3 +101,5 @@ var UniformReflectionFactories = {
   sampler2D:      function(arraySize, samplerIndex) { if (arraySize === 1) { return new Sampler2D(samplerIndex); } else { return new Sampler2DArray(arraySize, samplerIndex);}},
   samplerCube:    function(arraySize, samplerIndex) { if (arraySize === 1) { return new SamplerCube(samplerIndex); } else { return new SamplerCubeArray(arraySize, samplerIndex);}}
 };
+
+export {UniformReflectionFactories};

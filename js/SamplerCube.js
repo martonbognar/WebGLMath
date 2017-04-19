@@ -15,6 +15,8 @@ var SamplerCube = function(textureUnit) {
   this.textureUnit = textureUnit;
 };
 
+export {SamplerCube};
+
 /**
  * @method set
  * @memberof SamplerCube.prototype

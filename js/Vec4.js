@@ -3,6 +3,8 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {Mat4} from './Mat4';
+
 /**
  * @class Vec4
  * @classdesc Four-element vector of 32-bit floats. May reflect an ESSL vec4 uniform variable.
@@ -42,6 +44,8 @@ var Vec4 = function(u, v, s, t) {
     (u && (u.w - 1) || (Number(t).valueOf() - 1) || 0) + 1
   ]);
 };
+
+export {Vec4};
 
 /**
  * @method clone

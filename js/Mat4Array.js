@@ -3,6 +3,8 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {Mat4} from './Mat4';
+
 /**
  * @class Mat4Array
  * @classdesc Array of four by four matrices of 32-bit floats. May reflect an ESSL array-of-mat4s uniform variable.
@@ -19,6 +21,8 @@ var Mat4Array = function(size) {
     Object.defineProperty(this, i, {value: proxy});
   }
 };
+
+export {Mat4Array};
 
 /**
  * @method subarray

@@ -3,6 +3,9 @@
  * @copyright Laszlo Szecsi 2017
  */
 
+import {Vec3} from './Vec3';
+import {VecArray} from './VecArray';
+
 /**
  * @class Vec3Array
  * @extends VecArray
@@ -21,6 +24,8 @@ var Vec3Array = function(size) {
     Object.defineProperty(this, i, {value: proxy});
   }
 };
+
+export {Vec3Array};
 
 Vec3Array.prototype = Object.create(VecArray.prototype);
 Vec3Array.prototype.constructor = Vec3Array;
