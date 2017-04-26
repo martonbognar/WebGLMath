@@ -68,7 +68,17 @@ test('Vec1: * operation', () => {
 	expect(a.x).toBe(-3);
 	a.setProduct(b, c);
 	expect(a.x).toBe(-3);
+	
 });	
 
-
+test('Vec1: / operation', () => {
+	setInitValues();
+	
+	a.set(b).div(c);
+	expect(a.x).toBeCloseTo(-1/3);
+	a = b.over(c);
+	expect(a.x).toBeCloseTo(-1/3);
+	a.setQuotient(b, c);
+	expect(a.x).toBeCloseTo(-1/3);
+});	
 

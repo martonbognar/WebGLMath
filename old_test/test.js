@@ -1,17 +1,6 @@
-var approx = function(a, b) {
-  return Math.abs(a - b) < 0.01;
-};
-
 var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
-
-a.set(b).div(c);
-console.assert(approx(a.x , -1 / 3));
-a = b.over(c);
-console.assert(approx(a.x , -1 / 3));
-a.setQuotient(b, c);
-console.assert(approx(a.x , -1 / 3));
 
 b.set(2);
 a = b.times(7);
