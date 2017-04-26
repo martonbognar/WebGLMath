@@ -5,25 +5,7 @@ var approx = function(a, b) {
 var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
-console.assert(b.x === 9);
-a.set();
-console.assert(a.x === 0);
-a.set({x: 2, y: 3});
-console.assert(a.x === 2);
-for (var i = 0; i < 50; i++) {
-  a = Vec1.random(-2, 100);
-  console.assert(a.x >= -2);
-  console.assert(a.x < 100);
-  b.setRandom(34, 35);
-  console.assert(b.x >= 34);
-  console.assert(b.x < 35);
-  a.clamp(0, 1);
-  console.assert(a.x >= 0);
-  console.assert(a.x <= 1);
-  a.setClamped(b, 34.4, 34.5);
-  console.assert(a.x >= 34.4);
-  console.assert(a.x <= 34.5);
-}
+
 b.set(1);
 c.set(-3);
 a.set(b).add(c);

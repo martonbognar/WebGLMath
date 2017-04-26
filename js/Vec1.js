@@ -21,7 +21,7 @@ var Vec1 = function(u) {
 };
 
 module.exports = Vec1;
-export {Vec1};
+//export {Vec1};
 
 /**
  * @method clone
