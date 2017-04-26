@@ -42,7 +42,8 @@ var Vec3 = function(u, v, s) {
   ]);
 };
 
-export {Vec3};
+//export {Vec3};
+module.exports = Vec3;
 
 /**
  * @method clone

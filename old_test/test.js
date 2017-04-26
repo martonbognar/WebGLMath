@@ -15,18 +15,9 @@ console.assert(approx(
 	5));
 
 //////////////////////////////////////////////////////////////////////////////////
-	
-
-b.set(2, 1);
-a = b.times(7);
-console.assert(approx(a.x, 14));
-console.assert(approx(a.y, 7));
-a.set(b).mul(7);
-console.assert(approx(a.x, 14));
-console.assert(approx(a.y, 7));
-a.setScaled(b, 7);
-console.assert(approx(a.x, 14));
-console.assert(approx(a.y, 7));
+var a = new Vec2(9, 3);
+var b = a.clone();
+var c = new Vec2();
 
 b.set(4, -1);
 c.set(3, -1);
