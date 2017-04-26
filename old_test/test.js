@@ -6,15 +6,6 @@ var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
 
-b.set(1);
-c.set(-3);
-a.set(b).add(c);
-console.assert(a.x === -2);
-a = b.plus(c);
-console.assert(a.x === -2);
-a.setSum(b, c);
-console.assert(a.x === -2);
-
 a.set(b).sub(c);
 console.assert(a.x === 4);
 a = b.minus(c);

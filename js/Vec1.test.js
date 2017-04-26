@@ -11,9 +11,11 @@ test('Testing Vec1 clone + set', () => {
 	expect(a.x).toBe(2);
 });
 
+var a = new Vec1(9);
+var b = new Vec1(0);
+var c = new Vec1(0);
+
 test('Testing Vec1.random(), clamp()', () => {
-	var a = new Vec1(9);
-	var b = new Vec1(0);
 	for (var i = 0; i < 50; i++) {
 		a = Vec1.random(-2, 100);
 		expect(a.x).toBeGreaterThanOrEqual(-2);
@@ -29,3 +31,17 @@ test('Testing Vec1.random(), clamp()', () => {
 		expect(a.x).toBeLessThanOrEqual(34.5)
 	}
 });
+
+test('Testing Vec1 + operation', () => {
+	b.set(1);
+	c.set(-3);
+	a.set(b).add(c);
+	expect(a.x).toBe(-2);
+	a = b.plus(c);
+	expect(a.x).toBe(-2);
+	a.setSum(b, c);
+	expect(a.x).toBe(-2);
+});
+
+
+
