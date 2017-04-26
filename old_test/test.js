@@ -2,14 +2,6 @@ var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
 
-b.set(2);
-a = b.times(7);
-console.assert(approx(a.x, 14));
-a.set(b).mul(7);
-console.assert(approx(a.x, 14));
-a.setScaled(b, 7);
-console.assert(approx(a.x, 14));
-
 b.set(4);
 c.set(3);
 console.assert(approx(b.dot(c), 12));

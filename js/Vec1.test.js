@@ -69,6 +69,13 @@ test('Vec1: * operation', () => {
 	a.setProduct(b, c);
 	expect(a.x).toBe(-3);
 	
+	b.set(2);
+	a = b.times(7);
+	expect(a.x).toBeCloseTo (14);
+	a.set(b).mul(7);
+	expect(a.x).toBeCloseTo (14);
+	a.setScaled(b, 7);
+	expect(a.x).toBeCloseTo (14);
 });	
 
 test('Vec1: / operation', () => {
