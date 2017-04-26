@@ -4,7 +4,7 @@ var a = new Vec1(9);
 var b = new Vec1(1);
 var c = new Vec1(-3);
 
-test('Testing Vec1 clone + set', () => {
+test('Vec1: clone + set', () => {
 	var a = new Vec1(9);
 	var b = a.clone();
 	expect(b.x).toBe(9);
@@ -20,7 +20,7 @@ function setInitValues (){
 	c.set(-3);
 }
 
-test('Testing Vec1.random(), clamp()', () => {
+test('Vec1: random(), clamp()', () => {
 	for (var i = 0; i < 50; i++) {
 		a = Vec1.random(-2, 100);
 		expect(a.x).toBeGreaterThanOrEqual(-2);
@@ -37,7 +37,7 @@ test('Testing Vec1.random(), clamp()', () => {
 	}
 });
 
-test('Testing Vec1 + operation', () => {
+test('Vec1: + operation', () => {
 	setInitValues();
 	
 	a.set(b).add(c);
@@ -48,7 +48,7 @@ test('Testing Vec1 + operation', () => {
 	expect(a.x).toBe(-2);
 });	
 
-test('Testing Vec1 - operation', () => {
+test('Vec1: - operation', () => {
 	setInitValues();
 	
 	a.set(b).sub(c);
@@ -59,7 +59,7 @@ test('Testing Vec1 - operation', () => {
 	expect(a.x).toBe(4);
 });	
 
-test('Testing Vec1 * operation', () => {
+test('Vec1: * operation', () => {
 	setInitValues();
 	
 	a.set(b).mul(c);
