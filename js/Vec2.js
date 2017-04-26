@@ -19,7 +19,7 @@
  * <tr><td>&middot;</td><td>[dot]{@link Vec2#dot}</td></tr>
  * </table>
  * <BR> <code>a = b + c</code> can be computed as <code>var a = b.plus(c)</code>, when <code>a</code> does not yet exist, and performance does not matter. It is not required that <code>c</code> is a {@link Vec2}: it can be a vector of different length, an object literal, or its coordinates given as separate arguments.
- * <BR> <code>a.set(b).add(c)</code> is about three times faster. Variable <code>a</code> needs to exist, and be a {@link Vec2}. Neither b nor c are required to be {@link Vec2}s: they can be vectors of different length, object literals, or its coordinates given as separate arguments.
+ * <BR> <code>a.set(b).add(c)</code> is about three times faster. 	Variable <code>a</code> needs to exist, and be a {@link Vec2}. Neither b nor c are required to be {@link Vec2}s: they can be vectors of different length, object literals, or its coordinates given as separate arguments.
  * <BR> If <code>a</code>, <code>b</code> and <code>c</code> are {@link Vec2} instances, <code>a.setSum(b, c)</code> can be used for optimum performance. It is seven times faster than <code>a.set(b).add(c)</code>, or twenty times faster than <code>a = b.plus(c)</code>.
  * <BR> It is recommended to use optimized methods for time-critical per-frame tasks, while programmer-friendly interfaces are useful for one-time initializations, e.g. when constructing a scene.
  * @description  Without parameters, initializes the vector to (0, 0).
@@ -39,7 +39,8 @@ var Vec2 = function(u, v) {
   ]);
 };
 
-export {Vec2};
+//export {Vec2};
+module.exports = Vec2;
 
 /**
  * @method clone
