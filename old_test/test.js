@@ -6,13 +6,6 @@ var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
 
-a.set(b).sub(c);
-console.assert(a.x === 4);
-a = b.minus(c);
-console.assert(a.x === 4);
-a.setDifference(b, c);
-console.assert(a.x === 4);
-
 a.set(b).mul(c);
 console.assert(a.x === -3);
 a = b.times(c);

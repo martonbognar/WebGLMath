@@ -41,7 +41,18 @@ test('Testing Vec1 + operation', () => {
 	expect(a.x).toBe(-2);
 	a.setSum(b, c);
 	expect(a.x).toBe(-2);
-});
+});	
+
+test('Testing Vec1 - operation', () => {
+	b.set(1);
+	c.set(-3);
+	a.set(b).sub(c);
+	expect(a.x).toBe(4);
+	a = b.minus(c);
+	expect(a.x).toBe(4);
+	a.setDifference(b, c);
+	expect(a.x).toBe(4);
+});	
 
 
 
