@@ -2,10 +2,6 @@ var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
 
-b.set(4);
-c.set(3);
-console.assert(approx(b.dot(c), 12));
-
 console.assert(approx(
 	a.setDotProductOfVec3s(new Vec3(1, 2, 3), new Vec3(1, -1, 0)).x,
 	-1));
@@ -32,10 +28,6 @@ console.assert(approx(a.y, b.y));
 
 /////////////////////////////////////////////////////////////////
 ///Vec3
-
-b.set(4, -1, 5);
-c.set(3, -1, 5);
-console.assert(approx(b.dot(c), 13 + 25));
 
 b.set(3, 4, 0);
 console.assert(approx(b.length(), 5));

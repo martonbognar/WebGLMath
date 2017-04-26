@@ -109,3 +109,8 @@ test('Vec2: / operation', () => {
 	expect(a.y).toBeCloseTo(4 / 3);
 });	
 
+test('Vec2: dot', () => {
+	b.set(4, -1);
+	c.set(3, -1);
+	expect(b.dot(c)).toBeCloseTo(13);
+});	
