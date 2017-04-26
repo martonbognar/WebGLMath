@@ -1,4 +1,5 @@
 const Vec1 = require('./Vec1');
+const Vec3 = require('./Vec3');
 
 var a = new Vec1(9);
 var b = new Vec1(1);
@@ -89,8 +90,14 @@ test('Vec1: / operation', () => {
 	expect(a.x).toBeCloseTo(-1/3);
 });	
 
-test('Vec1: dot', () => {
+test('Vec1: vec operations', () => {
 	b.set(4);
 	c.set(3);
 	expect(b.dot(c)).toBe(12);
+	
+	a.setDotProductOfVec3s(new Vec3(1, 2, 3), new Vec3(1, -1, 0));
+	expect(a.x).toBeCloseTo(-1);
+	
+	a.setLengthOfVec3(new Vec3(3, 4, 0));
+	expect(a.x).toBeCloseTo (5);
 });	

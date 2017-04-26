@@ -109,8 +109,15 @@ test('Vec2: / operation', () => {
 	expect(a.y).toBeCloseTo(4 / 3);
 });	
 
-test('Vec2: dot', () => {
+test('Vec2: vec operations', () => {
 	b.set(4, -1);
 	c.set(3, -1);
 	expect(b.dot(c)).toBeCloseTo(13);
+	
+	b.set(3, 4);
+	expect(b.length()).toBe(5);
+	a = b.direction();
+	b.normalize();
+	expect(a.x).toBeCloseTo(b.x);
+	expect(a.y).toBeCloseTo(b.y);
 });	
