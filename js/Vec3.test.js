@@ -72,12 +72,15 @@ test('Vec3: - operation', () => {
 	a.set(b).sub(c);
 	expect(a.x).toBe(4);
 	expect(a.y).toBe(1);
+	expect(a.z).toBe(-2);
 	a = b.minus(c);
 	expect(a.x).toBe(4);
 	expect(a.y).toBe(1);
+	expect(a.z).toBe(-2);
 	a.setDifference(b, c);
 	expect(a.x).toBe(4);
 	expect(a.y).toBe(1);
+	expect(a.z).toBe(-2);
 });	
 
 test('Vec3: * operation', () => {
@@ -86,23 +89,29 @@ test('Vec3: * operation', () => {
 	a.set(b).mul(c);
 	expect(a.x).toBe(-3);
 	expect(a.y).toBe(12);
+	expect(a.z).toBe(3);
 	a = b.times(c);
 	expect(a.x).toBe(-3);
 	expect(a.y).toBe(12);
+	expect(a.z).toBe(3);
 	a.setProduct(b, c);
 	expect(a.x).toBe(-3);
 	expect(a.y).toBe(12);
+	expect(a.z).toBe(3);
 	
-	b.set(2, 1);
+	b.set(2, 1, -5);
 	a = b.times(7);
 	expect(a.x).toBeCloseTo(14);
 	expect(a.y).toBeCloseTo(7);
+	expect(a.z).toBeCloseTo(-35);
 	a.set(b).mul(7);
 	expect(a.x).toBeCloseTo(14);
 	expect(a.y).toBeCloseTo(7);
+	expect(a.z).toBeCloseTo(-35);
 	a.setScaled(b, 7);
 	expect(a.x).toBeCloseTo(14);
 	expect(a.y).toBeCloseTo(7);
+	expect(a.z).toBeCloseTo(-35);
 });	
 
 test('Vec2: / operation', () => {
@@ -111,11 +120,14 @@ test('Vec2: / operation', () => {
 	a.set(b).div(c);
 	expect(a.x).toBeCloseTo(-1 / 3);
 	expect(a.y).toBeCloseTo(4 / 3);
+	expect(a.z).toBeCloseTo(1 / 3);
 	a = b.over(c);
 	expect(a.x).toBeCloseTo(-1 / 3);
 	expect(a.y).toBeCloseTo(4 / 3);
+	expect(a.z).toBeCloseTo(1 / 3);
 	a.setQuotient(b, c);
 	expect(a.x).toBeCloseTo(-1 / 3);
 	expect(a.y).toBeCloseTo(4 / 3);
+	expect(a.z).toBeCloseTo(1 / 3);
 });	
 
