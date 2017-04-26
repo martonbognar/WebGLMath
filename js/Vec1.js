@@ -20,6 +20,7 @@ var Vec1 = function(u) {
   ]);
 };
 
+module.exports = Vec1;
 export {Vec1};
 
 /**
@@ -422,4 +423,3 @@ Vec1.prototype.setLengthOfVec4 = function(b) {
 Vec1.prototype.commit = function(gl, uniformLocation) {
   gl.uniform1fv(uniformLocation, this.storage);
 };
-
