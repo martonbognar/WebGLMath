@@ -15,28 +15,7 @@ console.assert(approx(
 	5));
 
 //////////////////////////////////////////////////////////////////////////////////
-
-
-for (var i = 0; i < 50; i++) {
-  a = Vec2.random({x: -2, y: -3}, {x: 100, y: 300});
-  console.assert(a.x >= -2);
-  console.assert(a.x < 100);
-  console.assert(a.y >= -3);
-  console.assert(a.y < 300);
-  b.setRandom(34, 35);
-  console.assert(b.x >= 34);
-  console.assert(b.x < 35);
-  console.assert(b.y >= 34);
-  console.assert(b.y < 35);
-  a.clamp(0, 1);
-  console.assert(a.x >= 0);
-  console.assert(a.x <= 1);
-  a.setClamped(b, 34.4, 34.5);
-  console.assert(a.y >= 34.4);
-  console.assert(a.y <= 34.5);
-}
-b.set(1, 4);
-c.set(-3, 3);
+	
 a.set(b).add(c);
 console.assert(a.x === -2);
 console.assert(a.y === 7);
