@@ -30,12 +30,16 @@ test('Vec3: random(), clamp()', () => {
 		expect(a.x).toBeGreaterThanOrEqual(-2);
 		expect(a.x).toBeLessThan(100);
 		expect(a.y).toBeGreaterThanOrEqual(-3);
-		expect(a.y).toBeLessThan(300);
+		expect(a.y).toBeLessThan (300);
+		expect(a.z).toBeGreaterThanOrEqual(0);
+		expect(a.z).toBeLessThan(1);
 		b.setRandom(34, 35);
 		expect(b.x).toBeGreaterThanOrEqual(34);
 		expect(b.x).toBeLessThan(35);
 		expect(b.y).toBeGreaterThanOrEqual(34);
 		expect(b.y).toBeLessThan(35);
+		expect(b.z).toBeGreaterThanOrEqual(34);
+		expect(b.z).toBeLessThan(35);
 		a.clamp(0, 1);
 		expect(a.x).toBeGreaterThanOrEqual(0);
 		expect(a.x).toBeLessThanOrEqual(1);
@@ -51,12 +55,15 @@ test('Vec3: + operation', () => {
 	a.set(b).add(c);
 	expect(a.x).toBe(-2);
 	expect(a.y).toBe(7);
+	expect(a.z).toBe(4);
 	a = b.plus(c);
 	expect(a.x).toBe(-2);
 	expect(a.y).toBe(7);
+	expect(a.z).toBe(4);
 	a.setSum(b, c);
 	expect(a.x).toBe(-2);
 	expect(a.y).toBe(7);
+	expect(a.z).toBe(4);
 });	
 
 test('Vec3: - operation', () => {

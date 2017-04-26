@@ -32,20 +32,6 @@ console.assert(approx(a.y, b.y));
 
 /////////////////////////////////////////////////////////////////
 
-var a = new Vec3(9, 3, 2);
-var b = a.clone();
-var c = new Vec3();
-console.assert(b.x === 9);
-console.assert(b.y === 3);
-console.assert(b.z === 2);
-a.set();
-console.assert(a.x === 0);
-console.assert(a.y === 0);
-console.assert(a.z === 0);
-a.set({x: 2, y: 3, z: 4});
-console.assert(a.x === 2);
-console.assert(a.y === 3);
-console.assert(a.z === 4);
 for (var i = 0; i < 50; i++) {
   a = Vec3.random({x: -2, y: -3}, {x: 100, y: 300});
   console.assert(a.x >= -2);
