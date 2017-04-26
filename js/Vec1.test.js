@@ -1,5 +1,9 @@
 const Vec1 = require('./Vec1');
 
+var a = new Vec1(9);
+var b = new Vec1(1);
+var c = new Vec1(-3);
+
 test('Testing Vec1 clone + set', () => {
 	var a = new Vec1(9);
 	var b = a.clone();
@@ -11,9 +15,10 @@ test('Testing Vec1 clone + set', () => {
 	expect(a.x).toBe(2);
 });
 
-var a = new Vec1(9);
-var b = new Vec1(0);
-var c = new Vec1(0);
+function setInitValues (){
+	b.set(1);
+	c.set(-3);
+}
 
 test('Testing Vec1.random(), clamp()', () => {
 	for (var i = 0; i < 50; i++) {
@@ -33,8 +38,8 @@ test('Testing Vec1.random(), clamp()', () => {
 });
 
 test('Testing Vec1 + operation', () => {
-	b.set(1);
-	c.set(-3);
+	setInitValues();
+	
 	a.set(b).add(c);
 	expect(a.x).toBe(-2);
 	a = b.plus(c);
@@ -44,14 +49,25 @@ test('Testing Vec1 + operation', () => {
 });	
 
 test('Testing Vec1 - operation', () => {
-	b.set(1);
-	c.set(-3);
+	setInitValues();
+	
 	a.set(b).sub(c);
 	expect(a.x).toBe(4);
 	a = b.minus(c);
 	expect(a.x).toBe(4);
 	a.setDifference(b, c);
 	expect(a.x).toBe(4);
+});	
+
+test('Testing Vec1 * operation', () => {
+	setInitValues();
+	
+	a.set(b).mul(c);
+	expect(a.x).toBe(-3);
+	a = b.times(c);
+	expect(a.x).toBe(-3);
+	a.setProduct(b, c);
+	expect(a.x).toBe(-3);
 });	
 
 

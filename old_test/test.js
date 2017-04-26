@@ -6,13 +6,6 @@ var a = new Vec1(9);
 var b = a.clone();
 var c = new Vec1();
 
-a.set(b).mul(c);
-console.assert(a.x === -3);
-a = b.times(c);
-console.assert(a.x === -3);
-a.setProduct(b, c);
-console.assert(a.x === -3);
-
 a.set(b).div(c);
 console.assert(approx(a.x , -1 / 3));
 a = b.over(c);
