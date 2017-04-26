@@ -226,11 +226,3 @@ b.normalize();
 console.assert(approx(a.x, b.x));
 console.assert(approx(a.y, b.y));
 console.assert(approx(a.z, b.z));
-
-//======================================================
-
-aa2.mulAll(ca2, new Vec2(-1, 2));
-console.log(Array.prototype.slice.call(ca2.storage));
-console.log(Array.prototype.slice.call(aa2.storage));
-
-console.log(new Vec2(3, 4).addScaled(0.5, Vec2(2, 4)));

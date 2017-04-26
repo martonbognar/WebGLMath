@@ -31,4 +31,10 @@ test('Vec1Array test1', () => {
 	aa1[0].x = 333;
 	aa2[3].set(3, 4);
 	expect(aa2[3].length()).toBeCloseTo(5);
+	
+	aa2.mulAll(ca2, new Vec2(-1, 2));
+	//console.log(Array.prototype.slice.call(ca2.storage));
+	//console.log(Array.prototype.slice.call(aa2.storage));
+
+	//console.log(new Vec2(3, 4).addScaled(0.5, Vec2(2, 4)));
 });

@@ -25,7 +25,7 @@ var Vec1Array = function(size) {
   }
 };
 
-//export {Vec1Array};
+export {Vec1Array};
 module.exports = Vec1Array;
 
 Vec1Array.prototype = Object.create(VecArray.prototype);
