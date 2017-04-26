@@ -43,21 +43,69 @@ test('Vec2: random(), clamp()', () => {
 });
 
 test('Vec2: + operation', () => {
+	setInitValues();
 	
+	a.set(b).add(c);
+	expect(a.x).toBe(-2);
+	expect(a.y).toBe(7);
+	a = b.plus(c);
+	expect(a.x).toBe(-2);
+	expect(a.y).toBe(7);
+	a.setSum(b, c);
+	expect(a.x).toBe(-2);
+	expect(a.y).toBe(7);
 });	
 
 test('Vec2: - operation', () => {
+	setInitValues();
 	
+	a.set(b).sub(c);
+	expect(a.x).toBe(4);
+	expect(a.y).toBe(1);
+	a = b.minus(c);
+	expect(a.x).toBe(4);
+	expect(a.y).toBe(1);
+	a.setDifference(b, c);
+	expect(a.x).toBe(4);
+	expect(a.y).toBe(1);
 });	
 
 test('Vec2: * operation', () => {
 	setInitValues();
 	
+	a.set(b).mul(c);
+	expect(a.x).toBe(-3);
+	expect(a.y).toBe(12);
+	a = b.times(c);
+	expect(a.x).toBe(-3);
+	expect(a.y).toBe(12);
+	a.setProduct(b, c);
+	expect(a.x).toBe(-3);
+	expect(a.y).toBe(12);
 	
+	b.set(2, 1);
+	a = b.times(7);
+	expect(a.x).toBeCloseTo(14);
+	expect(a.y).toBeCloseTo(7);
+	a.set(b).mul(7);
+	expect(a.x).toBeCloseTo(14);
+	expect(a.y).toBeCloseTo(7);
+	a.setScaled(b, 7);
+	expect(a.x).toBeCloseTo(14);
+	expect(a.y).toBeCloseTo(7);
 });	
 
 test('Vec2: / operation', () => {
 	setInitValues();
 	
+	a.set(b).div(c);
+	expect(a.x).toBeCloseTo(-1 / 3);
+	expect(a.y).toBeCloseTo(4 / 3);
+	a = b.over(c);
+	expect(a.x).toBeCloseTo(-1 / 3);
+	expect(a.y).toBeCloseTo(4 / 3);
+	a.setQuotient(b, c);
+	expect(a.x).toBeCloseTo(-1 / 3);
+	expect(a.y).toBeCloseTo(4 / 3);
 });	
 

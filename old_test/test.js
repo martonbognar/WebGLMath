@@ -16,45 +16,6 @@ console.assert(approx(
 
 //////////////////////////////////////////////////////////////////////////////////
 	
-a.set(b).add(c);
-console.assert(a.x === -2);
-console.assert(a.y === 7);
-a = b.plus(c);
-console.assert(a.x === -2);
-console.assert(a.y === 7);
-a.setSum(b, c);
-console.assert(a.x === -2);
-console.assert(a.y === 7);
-
-a.set(b).sub(c);
-console.assert(a.x === 4);
-console.assert(a.y === 1);
-a = b.minus(c);
-console.assert(a.x === 4);
-console.assert(a.y === 1);
-a.setDifference(b, c);
-console.assert(a.x === 4);
-console.assert(a.y === 1);
-
-a.set(b).mul(c);
-console.assert(a.x === -3);
-console.assert(a.y === 12);
-a = b.times(c);
-console.assert(a.x === -3);
-console.assert(a.y === 12);
-a.setProduct(b, c);
-console.assert(a.x === -3);
-console.assert(a.y === 12);
-
-a.set(b).div(c);
-console.assert(approx(a.x , -1 / 3));
-console.assert(approx(a.y , 4 / 3));
-a = b.over(c);
-console.assert(approx(a.x , -1 / 3));
-console.assert(approx(a.y , 4 / 3));
-a.setQuotient(b, c);
-console.assert(approx(a.x , -1 / 3));
-console.assert(approx(a.y , 4 / 3));
 
 b.set(2, 1);
 a = b.times(7);
