@@ -25,10 +25,12 @@ var Vec2Array = function(size) {
   }
 };
 
-export {Vec2Array};
+export {Vec2Array}
 
 Vec2Array.prototype = Object.create(VecArray.prototype);
 Vec2Array.prototype.constructor = Vec2Array;
+
+module.exports = Vec2Array;
 
 /**
  * @method subarray

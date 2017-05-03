@@ -20,8 +20,10 @@ var Vec1 = function(u) {
   ]);
 };
 
+Vec1.prototype = Object.create(Vec1.prototype);
+
 module.exports = Vec1;
-//export {Vec1};
+export {Vec1};
 
 /**
  * @method clone
