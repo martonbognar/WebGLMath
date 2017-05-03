@@ -413,15 +413,15 @@ Mat4.prototype.commit = function(gl, uniformLocation) {
 
 /**
  * @name Mat4.prototype#p
- * @description When this property is accessed, it pretty prints the matrix contents on the console. Intended for quick debugging.
+ * @description This property returns the contents of the matrix in a tabular format. Intended for quick debugging, with `console.table`.
  * @type undefined
  */
 Object.defineProperty(Mat4.prototype, 'p', {
-  get: function() { console.table({
+  get: function() { return ({
       row0: {column0: this.storage[ 0], column1: this.storage[ 4], column2: this.storage[ 8], column3: this.storage[12]},
       row1: {column0: this.storage[ 1], column1: this.storage[ 5], column2: this.storage[ 9], column3: this.storage[13]},
       row3: {column0: this.storage[ 2], column1: this.storage[ 6], column2: this.storage[10], column3: this.storage[14]},
-      row4: {column0: this.storage[ 3], column1: this.storage[ 7], column2: this.storage[11], column3: this.storage[15]}
+      row4: {column0: this.storage[ 3], column1: this.storage[ 7], column2: this.storage[11], column3: this.storage[15]},
     }); },
 });
 
