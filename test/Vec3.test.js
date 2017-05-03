@@ -1,4 +1,4 @@
-const Vec3 = require('./Vec3');
+const Vec3 = require('../js/Vec3');
 
 var a = new Vec3(9, 3, 2);
 var b = a.clone();

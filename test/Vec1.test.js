@@ -1,5 +1,5 @@
-const aaaa = require('./Vec1');
-const Vec3 = require('./Vec3');
+const Vec1 = require('../js/Vec1');
+const Vec3 = require('../js/Vec3');
 
 var a = new Vec1(9);
 var b = new Vec1(1);
