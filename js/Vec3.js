@@ -742,4 +742,3 @@ Vec3.prototype.setxyz0Transformed = function(v, m) {
 Vec3.prototype.commit = function(gl, uniformLocation) {
   gl.uniform3fv(uniformLocation, this.storage);
 };
-

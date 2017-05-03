@@ -9,7 +9,7 @@
   "scripts": {
     "build": "webpack -p",
     "analyze": "coala --ci --files=js/*.js --bears=ESLintBear",
-    "test": "jest" 
+    "test": "jest"
   },
   "jest": {
 	 "testPathIgnorePatterns": [
