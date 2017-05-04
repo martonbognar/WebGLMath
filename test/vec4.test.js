@@ -140,8 +140,6 @@ test('Vec4: * operation', () => {
 
 test('Vec4: / operation', () => {
 	setInitValues();
-  //b.set(1, 4, 1, 5);
-  //c.set(-3, 3, 3, 6);
 	a.set(b).div(c);
 	expect(a.x).toBeCloseTo(1 / -3);
 	expect(a.y).toBeCloseTo(4 / 3);
