@@ -50,10 +50,6 @@ test('Mat4: invert', () => {
 
 test('Mat4: mul', () => {
   setInitValues();
-  expect(a).toEqual(new Mat4([1, 2, 3, 4,
-                              5, 4, 3, 2,
-                              2, 2, 1, 0,
-                              3, 2, 1, 0]));
   a.mul(b);
   expect(a).toEqual(new Mat4([43, 27, 16, 76,
                               41, 39, 44, 80,

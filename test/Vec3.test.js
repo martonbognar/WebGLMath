@@ -4,7 +4,7 @@ var a = new Vec3(9, 3, 2);
 var b = a.clone();
 var c = new Vec3();
 
-test('Vec3: clone + set', () => {	
+test('Vec3: clone + set', () => {
 	a.set(9,3,2);
 	expect(a.x).toBe(9);
 	expect(a.y).toBe(3);
@@ -51,7 +51,7 @@ test('Vec3: random(), clamp()', () => {
 
 test('Vec3: + operation', () => {
 	setInitValues();
-	
+
 	a.set(b).add(c);
 	expect(a.x).toBe(-2);
 	expect(a.y).toBe(7);
@@ -64,11 +64,11 @@ test('Vec3: + operation', () => {
 	expect(a.x).toBe(-2);
 	expect(a.y).toBe(7);
 	expect(a.z).toBe(4);
-});	
+});
 
 test('Vec3: - operation', () => {
 	setInitValues();
-	
+
 	a.set(b).sub(c);
 	expect(a.x).toBe(4);
 	expect(a.y).toBe(1);
@@ -81,11 +81,11 @@ test('Vec3: - operation', () => {
 	expect(a.x).toBe(4);
 	expect(a.y).toBe(1);
 	expect(a.z).toBe(-2);
-});	
+});
 
 test('Vec3: * operation', () => {
 	setInitValues();
-	
+
 	a.set(b).mul(c);
 	expect(a.x).toBe(-3);
 	expect(a.y).toBe(12);
@@ -98,7 +98,7 @@ test('Vec3: * operation', () => {
 	expect(a.x).toBe(-3);
 	expect(a.y).toBe(12);
 	expect(a.z).toBe(3);
-	
+
 	b.set(2, 1, -5);
 	a = b.times(7);
 	expect(a.x).toBeCloseTo(14);
@@ -112,11 +112,11 @@ test('Vec3: * operation', () => {
 	expect(a.x).toBeCloseTo(14);
 	expect(a.y).toBeCloseTo(7);
 	expect(a.z).toBeCloseTo(-35);
-});	
+});
 
-test('Vec2: / operation', () => {
+test('Vec3: / operation', () => {
 	setInitValues();
-	
+
 	a.set(b).div(c);
 	expect(a.x).toBeCloseTo(-1 / 3);
 	expect(a.y).toBeCloseTo(4 / 3);
@@ -129,13 +129,13 @@ test('Vec2: / operation', () => {
 	expect(a.x).toBeCloseTo(-1 / 3);
 	expect(a.y).toBeCloseTo(4 / 3);
 	expect(a.z).toBeCloseTo(1 / 3);
-});	
+});
 
 test('Vec3: vec operations', () => {
 	b.set(4, -1, 5);
 	c.set(3, -1, 5);
 	expect(b.dot(c)).toBeCloseTo(13 + 25);
-	
+
 	b.set(3, 4, 0);
 	expect(b.length()).toBe(5);
 	a = b.direction();
@@ -143,4 +143,4 @@ test('Vec3: vec operations', () => {
 	expect(a.x).toBe(b.x);
 	expect(a.y).toBe(a.y);
 	expect(a.z).toBe(a.z);
-});	
+});
