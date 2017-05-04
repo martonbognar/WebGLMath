@@ -22,8 +22,8 @@ var Mat4 = function(m) {
   this.set(m);
 };
 
-export {Mat4};
-
+//export {Mat4};
+module.exports = Mat4;
 /**
  * @method clone
  * @memberof Mat.prototype
@@ -424,4 +424,3 @@ Object.defineProperty(Mat4.prototype, 'p', {
       row4: {column0: this.storage[ 3], column1: this.storage[ 7], column2: this.storage[11], column3: this.storage[15]}
     }); },
 });
-

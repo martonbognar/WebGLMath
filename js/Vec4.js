@@ -3,8 +3,8 @@
  * @copyright Laszlo Szecsi 2017
  */
 
-import {Mat4} from './Mat4';
-
+//import {Mat4} from './Mat4';
+const Mat4 = require('./Mat4');
 /**
  * @class Vec4
  * @classdesc Four-element vector of 32-bit floats. May reflect an ESSL vec4 uniform variable.
@@ -45,8 +45,8 @@ var Vec4 = function(u, v, s, t) {
   ]);
 };
 
-export {Vec4};
-
+//export {Vec4};
+module.exports = Vec4;
 /**
  * @method clone
  * @memberof Vec4.prototype
