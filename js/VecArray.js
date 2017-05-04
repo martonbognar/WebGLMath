@@ -12,6 +12,7 @@ var VecArray = function() {
 };
 
 export {VecArray};
+module.exports = VecArray;
 
 /**
  * @method add
