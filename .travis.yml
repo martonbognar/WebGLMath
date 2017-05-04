@@ -6,5 +6,6 @@ install:
 script:
  - npm run analyze
  - npm run build
+ - npm run test
 notifications:
   email: false
