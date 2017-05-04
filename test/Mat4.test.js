@@ -5,12 +5,18 @@ var a = new Mat4([1, 2, 3, 4,
                  2, 2, 1, 0,
                  3, 2, 1, 0]);
 var b = new Mat4();
+var c = a.clone();
 
-test('Mat4: set', () => {
+test('Mat4: set, clone', () => {
 	expect(a.storage[0]).toBeCloseTo(1);
   expect(a.storage[4]).toBeCloseTo(2);
   expect(a.storage[6]).toBeCloseTo(2);
   expect(a.storage[15]).toBeCloseTo(0);
+  expect(c.storage[0]).toBeCloseTo(1);
+  expect(c.storage[4]).toBeCloseTo(2);
+  expect(c.storage[6]).toBeCloseTo(2);
+  expect(c.storage[15]).toBeCloseTo(0);
+
   b.set(a.storage);
   expect(b.storage[0]).toBeCloseTo(1);
   expect(b.storage[4]).toBeCloseTo(5);
@@ -91,4 +97,13 @@ test('Mat4: transpose', () => {
                               2, 4, 2, 2,
                               3, 3, 1, 1,
                               4, 2, 0, 0]));
+});
+
+test('Mat4: translate', () => {
+  setInitValues();
+  a.translate(0.7, 0.2, 0.3);
+  expect(a).toEqual(a.mul( new Mat4([1, 0, 0, 0.7,
+                                     0, 1, 0, 0.2,
+                                     0, 0, 1, 0.3,
+                                     0, 0, 0, 1])));
 });
