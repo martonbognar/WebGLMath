@@ -22,6 +22,7 @@ var Vec1 = function(u) {
 
 Vec1.prototype = Object.create(Vec1.prototype);
 
+/*global module:true*/
 module.exports = Vec1;
 export {Vec1};
 

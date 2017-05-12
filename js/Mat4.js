@@ -23,6 +23,7 @@ var Mat4 = function(m) {
 };
 
 //export {Mat4};
+/*global module:true*/
 module.exports = Mat4;
 /**
  * @method clone

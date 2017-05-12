@@ -45,8 +45,10 @@ var Vec4 = function(u, v, s, t) {
   ]);
 };
 
-//export {Vec4};
+export {Vec4};
+/*global module:true*/
 module.exports = Vec4;
+
 /**
  * @method clone
  * @memberof Vec4.prototype

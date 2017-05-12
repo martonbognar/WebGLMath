@@ -39,7 +39,8 @@ var Vec2 = function(u, v) {
   ]);
 };
 
-//export {Vec2};
+export {Vec2};
+/*global module:true*/
 module.exports = Vec2;
 
 /**
